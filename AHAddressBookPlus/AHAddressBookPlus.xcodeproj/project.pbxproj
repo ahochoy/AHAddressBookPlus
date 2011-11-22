@@ -1,0 +1,324 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B39A0FD8147C390B00704A12 /* AddressBook.m in Sources */ = {isa = PBXBuildFile; fileRef = B39A0FD7147C390B00704A12 /* AddressBook.m */; };
+		B39A0FDB147C391700704A12 /* AddressCard.m in Sources */ = {isa = PBXBuildFile; fileRef = B39A0FDA147C391700704A12 /* AddressCard.m */; };
+		B39A0FE1147C4A3300704A12 /* Contacts.plist in Resources */ = {isa = PBXBuildFile; fileRef = B39A0FE0147C4A3300704A12 /* Contacts.plist */; };
+		FB4F8EE1147C24F300085655 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB4F8EE0147C24F300085655 /* UIKit.framework */; };
+		FB4F8EE3147C24F300085655 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB4F8EE2147C24F300085655 /* Foundation.framework */; };
+		FB4F8EE5147C24F300085655 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB4F8EE4147C24F300085655 /* CoreGraphics.framework */; };
+		FB4F8EEB147C24F400085655 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FB4F8EE9147C24F400085655 /* InfoPlist.strings */; };
+		FB4F8EEE147C24F400085655 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FB4F8EED147C24F400085655 /* main.m */; };
+		FB4F8EF1147C24F400085655 /* AHAddressBookPlusAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FB4F8EF0147C24F400085655 /* AHAddressBookPlusAppDelegate.m */; };
+		FB4F8EF4147C24F400085655 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB4F8EF2147C24F400085655 /* MainWindow.xib */; };
+		FB4F8EF7147C24F400085655 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB4F8EF6147C24F400085655 /* RootViewController.m */; };
+		FB4F8EFA147C24F400085655 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB4F8EF8147C24F400085655 /* RootViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		B39A0FD6147C390B00704A12 /* AddressBook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressBook.h; sourceTree = "<group>"; };
+		B39A0FD7147C390B00704A12 /* AddressBook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressBook.m; sourceTree = "<group>"; };
+		B39A0FD9147C391700704A12 /* AddressCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressCard.h; sourceTree = "<group>"; };
+		B39A0FDA147C391700704A12 /* AddressCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressCard.m; sourceTree = "<group>"; };
+		B39A0FE0147C4A3300704A12 /* Contacts.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Contacts.plist; sourceTree = "<group>"; };
+		FB4F8EDC147C24F300085655 /* AHAddressBookPlus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AHAddressBookPlus.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB4F8EE0147C24F300085655 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		FB4F8EE2147C24F300085655 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		FB4F8EE4147C24F300085655 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		FB4F8EE8147C24F400085655 /* AHAddressBookPlus-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AHAddressBookPlus-Info.plist"; sourceTree = "<group>"; };
+		FB4F8EEA147C24F400085655 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FB4F8EEC147C24F400085655 /* AHAddressBookPlus-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AHAddressBookPlus-Prefix.pch"; sourceTree = "<group>"; };
+		FB4F8EED147C24F400085655 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FB4F8EEF147C24F400085655 /* AHAddressBookPlusAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AHAddressBookPlusAppDelegate.h; sourceTree = "<group>"; };
+		FB4F8EF0147C24F400085655 /* AHAddressBookPlusAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AHAddressBookPlusAppDelegate.m; sourceTree = "<group>"; };
+		FB4F8EF3147C24F400085655 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		FB4F8EF5147C24F400085655 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		FB4F8EF6147C24F400085655 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		FB4F8EF9147C24F400085655 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/RootViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FB4F8ED9147C24F300085655 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB4F8EE1147C24F300085655 /* UIKit.framework in Frameworks */,
+				FB4F8EE3147C24F300085655 /* Foundation.framework in Frameworks */,
+				FB4F8EE5147C24F300085655 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B39A0FCE147C376000704A12 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FB4F8EF2147C24F400085655 /* MainWindow.xib */,
+				FB4F8EF8147C24F400085655 /* RootViewController.xib */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		B39A0FD0147C376900704A12 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FB4F8EF5147C24F400085655 /* RootViewController.h */,
+				FB4F8EF6147C24F400085655 /* RootViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		B39A0FD5147C38E800704A12 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B39A0FD6147C390B00704A12 /* AddressBook.h */,
+				B39A0FD7147C390B00704A12 /* AddressBook.m */,
+				B39A0FD9147C391700704A12 /* AddressCard.h */,
+				B39A0FDA147C391700704A12 /* AddressCard.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		FB4F8ED1147C24F300085655 = {
+			isa = PBXGroup;
+			children = (
+				FB4F8EE6147C24F300085655 /* AHAddressBookPlus */,
+				FB4F8EDF147C24F300085655 /* Frameworks */,
+				FB4F8EDD147C24F300085655 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FB4F8EDD147C24F300085655 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FB4F8EDC147C24F300085655 /* AHAddressBookPlus.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FB4F8EDF147C24F300085655 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FB4F8EE0147C24F300085655 /* UIKit.framework */,
+				FB4F8EE2147C24F300085655 /* Foundation.framework */,
+				FB4F8EE4147C24F300085655 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FB4F8EE6147C24F300085655 /* AHAddressBookPlus */ = {
+			isa = PBXGroup;
+			children = (
+				B39A0FD5147C38E800704A12 /* Models */,
+				B39A0FCE147C376000704A12 /* Views */,
+				B39A0FD0147C376900704A12 /* Controllers */,
+				FB4F8EEF147C24F400085655 /* AHAddressBookPlusAppDelegate.h */,
+				FB4F8EF0147C24F400085655 /* AHAddressBookPlusAppDelegate.m */,
+				FB4F8EE7147C24F400085655 /* Supporting Files */,
+			);
+			path = AHAddressBookPlus;
+			sourceTree = "<group>";
+		};
+		FB4F8EE7147C24F400085655 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B39A0FE0147C4A3300704A12 /* Contacts.plist */,
+				FB4F8EE8147C24F400085655 /* AHAddressBookPlus-Info.plist */,
+				FB4F8EE9147C24F400085655 /* InfoPlist.strings */,
+				FB4F8EEC147C24F400085655 /* AHAddressBookPlus-Prefix.pch */,
+				FB4F8EED147C24F400085655 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FB4F8EDB147C24F300085655 /* AHAddressBookPlus */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB4F8EFD147C24F400085655 /* Build configuration list for PBXNativeTarget "AHAddressBookPlus" */;
+			buildPhases = (
+				FB4F8ED8147C24F300085655 /* Sources */,
+				FB4F8ED9147C24F300085655 /* Frameworks */,
+				FB4F8EDA147C24F300085655 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AHAddressBookPlus;
+			productName = AHAddressBookPlus;
+			productReference = FB4F8EDC147C24F300085655 /* AHAddressBookPlus.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FB4F8ED3147C24F300085655 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = FB4F8ED6147C24F300085655 /* Build configuration list for PBXProject "AHAddressBookPlus" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = FB4F8ED1147C24F300085655;
+			productRefGroup = FB4F8EDD147C24F300085655 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FB4F8EDB147C24F300085655 /* AHAddressBookPlus */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FB4F8EDA147C24F300085655 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB4F8EEB147C24F400085655 /* InfoPlist.strings in Resources */,
+				FB4F8EF4147C24F400085655 /* MainWindow.xib in Resources */,
+				FB4F8EFA147C24F400085655 /* RootViewController.xib in Resources */,
+				B39A0FE1147C4A3300704A12 /* Contacts.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FB4F8ED8147C24F300085655 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB4F8EEE147C24F400085655 /* main.m in Sources */,
+				FB4F8EF1147C24F400085655 /* AHAddressBookPlusAppDelegate.m in Sources */,
+				FB4F8EF7147C24F400085655 /* RootViewController.m in Sources */,
+				B39A0FD8147C390B00704A12 /* AddressBook.m in Sources */,
+				B39A0FDB147C391700704A12 /* AddressCard.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FB4F8EE9147C24F400085655 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FB4F8EEA147C24F400085655 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		FB4F8EF2147C24F400085655 /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FB4F8EF3147C24F400085655 /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		FB4F8EF8147C24F400085655 /* RootViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FB4F8EF9147C24F400085655 /* en */,
+			);
+			name = RootViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FB4F8EFB147C24F400085655 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		FB4F8EFC147C24F400085655 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		FB4F8EFE147C24F400085655 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AHAddressBookPlus/AHAddressBookPlus-Prefix.pch";
+				INFOPLIST_FILE = "AHAddressBookPlus/AHAddressBookPlus-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		FB4F8EFF147C24F400085655 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AHAddressBookPlus/AHAddressBookPlus-Prefix.pch";
+				INFOPLIST_FILE = "AHAddressBookPlus/AHAddressBookPlus-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FB4F8ED6147C24F300085655 /* Build configuration list for PBXProject "AHAddressBookPlus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB4F8EFB147C24F400085655 /* Debug */,
+				FB4F8EFC147C24F400085655 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FB4F8EFD147C24F400085655 /* Build configuration list for PBXNativeTarget "AHAddressBookPlus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB4F8EFE147C24F400085655 /* Debug */,
+				FB4F8EFF147C24F400085655 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FB4F8ED3147C24F300085655 /* Project object */;
+}
