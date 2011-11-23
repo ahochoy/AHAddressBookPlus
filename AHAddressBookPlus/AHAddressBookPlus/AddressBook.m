@@ -6,14 +6,14 @@
 //  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import "AddressBook.h"
-
 #define FIRSTNAMEIDX 0
 #define LASTNAMEIDX 1
 #define ADDRESSIDX 2
 #define PHONEIDX 3
 #define EMAILIDX 4
 #define BDAYIDX 5
+
+#import "AddressBook.h"
 
 @implementation AddressBook
 
@@ -23,10 +23,14 @@
     self = [super init];
     if(self) {
         
-        self.path = [[NSBundle mainBundle] pathForResource: @"Contacts"
-                                                         ofType: @"plist"];
+        NSString *rootPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,
+                                                                  NSUserDomainMask, YES) objectAtIndex:0];
+        self.path = [rootPath stringByAppendingPathComponent:@"Contacts.plist"];
+        if (![[NSFileManager defaultManager] fileExistsAtPath:self.path]) {
+            self.path = [[NSBundle mainBundle] pathForResource:@"Contacts" ofType:@"plist"];
+        }
         
-        NSMutableArray *pArray = [[NSMutableArray alloc] initWithContentsOfFile: path];
+        NSMutableArray *pArray = [NSMutableArray arrayWithContentsOfFile:self.path];
         NSMutableArray *temp = [[NSMutableArray alloc] init];
         
         for (NSArray *arr in pArray) {
@@ -39,7 +43,7 @@
             tempCard.phoneNumber = [arr objectAtIndex:PHONEIDX];
             tempCard.email = [arr objectAtIndex:EMAILIDX];
             tempCard.birthday = [arr objectAtIndex:BDAYIDX];
-                                                                 
+            
             [temp addObject: tempCard];
             
             [tempCard release];
@@ -47,10 +51,8 @@
         
         self.book = temp;
         [self sortBook];
-        
+
         [temp release];
-        [pArray release];
-        [path release];
     }
     return self;
 }
@@ -99,7 +101,7 @@
     
     NSMutableArray *temp = [[NSMutableArray alloc] init];
     
-    for (AddressCard *card in book) {
+    for (AddressCard *card in self.book) {
         
         NSMutableArray *cardArr = [[NSMutableArray alloc] init];
         
@@ -117,8 +119,7 @@
     
     [temp writeToFile:path atomically:YES];
     
-    [temp release];
-    [book release];
+    [temp release]; 
     
     [super dealloc];
 }

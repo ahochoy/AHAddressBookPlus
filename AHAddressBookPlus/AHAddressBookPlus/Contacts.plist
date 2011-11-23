@@ -1,5 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-<dict/>
+<array>
+	<array>
+		<string>Andrew</string>
+		<string>HoChoy</string>
+		<string>8723 Sheraton Dr. Miramar, FL 33025</string>
+		<string>9546008715</string>
+		<string>a.hochoy@gmail.com</string>
+		<date>1986-12-24T05:00:00Z</date>
+	</array>
+	<array>
+		<string>Panther</string>
+		<string>Roary</string>
+		<string>1000 FIU Way, Miami, FL 33025</string>
+		<string>3055551234</string>
+		<string>roary@fiu.edu</string>
+		<date>1965-08-18T23:46:34Z</date>
+	</array>
+</array>
 </plist>

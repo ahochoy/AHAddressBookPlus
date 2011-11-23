@@ -15,9 +15,12 @@
     NSString *fullAddress;
     NSString *phoneNumber;
     NSString *email;
-    NSString *birthday;
+    NSDate *birthday;
 }
 
-@property (nonatomic,retain) NSString *firstName, *lastName, *fullAddress, *phoneNumber, *email, *birthday;
+@property (nonatomic,retain) NSString *firstName, *lastName, *fullAddress, *phoneNumber, *email;
+@property (nonatomic,retain) NSDate *birthday;
+
++(AddressCard *) blankCard;
 
 @end

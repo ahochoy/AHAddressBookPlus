@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B34B67B7147C54A3002E84FC /* MainWindow-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = B34B67B5147C54A3002E84FC /* MainWindow-iPad.xib */; };
+		B34B67BB147C6454002E84FC /* ContactDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B34B67B9147C6454002E84FC /* ContactDetailViewController.m */; };
+		B34B67BC147C6454002E84FC /* ContactEditView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B34B67BA147C6454002E84FC /* ContactEditView.xib */; };
+		B34B67C3147C6D46002E84FC /* AddContactController.m in Sources */ = {isa = PBXBuildFile; fileRef = B34B67C2147C6D46002E84FC /* AddContactController.m */; };
+		B34B67C9147C8533002E84FC /* ContactDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B34B67C8147C8533002E84FC /* ContactDetailView.xib */; };
+		B34B67CC147C8886002E84FC /* EditContactController.m in Sources */ = {isa = PBXBuildFile; fileRef = B34B67CB147C8886002E84FC /* EditContactController.m */; };
+		B34B67CE147C97EC002E84FC /* ContactAddView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B34B67CD147C97EC002E84FC /* ContactAddView.xib */; };
 		B39A0FD8147C390B00704A12 /* AddressBook.m in Sources */ = {isa = PBXBuildFile; fileRef = B39A0FD7147C390B00704A12 /* AddressBook.m */; };
 		B39A0FDB147C391700704A12 /* AddressCard.m in Sources */ = {isa = PBXBuildFile; fileRef = B39A0FDA147C391700704A12 /* AddressCard.m */; };
 		B39A0FE1147C4A3300704A12 /* Contacts.plist in Resources */ = {isa = PBXBuildFile; fileRef = B39A0FE0147C4A3300704A12 /* Contacts.plist */; };
@@ -22,11 +29,21 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B34B67B6147C54A3002E84FC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = "iPad/en.lproj/MainWindow-iPad.xib"; sourceTree = "<group>"; };
+		B34B67B8147C6454002E84FC /* ContactDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactDetailViewController.h; sourceTree = "<group>"; };
+		B34B67B9147C6454002E84FC /* ContactDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactDetailViewController.m; sourceTree = "<group>"; };
+		B34B67BA147C6454002E84FC /* ContactEditView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContactEditView.xib; sourceTree = "<group>"; };
+		B34B67C1147C6D46002E84FC /* AddContactController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddContactController.h; sourceTree = "<group>"; };
+		B34B67C2147C6D46002E84FC /* AddContactController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddContactController.m; sourceTree = "<group>"; };
+		B34B67C8147C8533002E84FC /* ContactDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContactDetailView.xib; sourceTree = "<group>"; };
+		B34B67CA147C8886002E84FC /* EditContactController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditContactController.h; sourceTree = "<group>"; };
+		B34B67CB147C8886002E84FC /* EditContactController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditContactController.m; sourceTree = "<group>"; };
+		B34B67CD147C97EC002E84FC /* ContactAddView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContactAddView.xib; sourceTree = "<group>"; };
 		B39A0FD6147C390B00704A12 /* AddressBook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressBook.h; sourceTree = "<group>"; };
 		B39A0FD7147C390B00704A12 /* AddressBook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressBook.m; sourceTree = "<group>"; };
 		B39A0FD9147C391700704A12 /* AddressCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressCard.h; sourceTree = "<group>"; };
 		B39A0FDA147C391700704A12 /* AddressCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressCard.m; sourceTree = "<group>"; };
-		B39A0FE0147C4A3300704A12 /* Contacts.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Contacts.plist; sourceTree = "<group>"; };
+		B39A0FE0147C4A3300704A12 /* Contacts.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Contacts.plist; path = /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/../../../../../../Users/ahochoy/Desktop/AHAddressBookPlus/AHAddressBookPlus/AHAddressBookPlus/Contacts.plist; sourceTree = "<absolute>"; };
 		FB4F8EDC147C24F300085655 /* AHAddressBookPlus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AHAddressBookPlus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB4F8EE0147C24F300085655 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FB4F8EE2147C24F300085655 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -57,9 +74,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B34B67B4147C54A2002E84FC /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+				B34B67B5147C54A3002E84FC /* MainWindow-iPad.xib */,
+			);
+			name = iPad;
+			sourceTree = "<group>";
+		};
 		B39A0FCE147C376000704A12 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B34B67BA147C6454002E84FC /* ContactEditView.xib */,
+				B34B67CD147C97EC002E84FC /* ContactAddView.xib */,
+				B34B67C8147C8533002E84FC /* ContactDetailView.xib */,
 				FB4F8EF2147C24F400085655 /* MainWindow.xib */,
 				FB4F8EF8147C24F400085655 /* RootViewController.xib */,
 			);
@@ -71,6 +99,12 @@
 			children = (
 				FB4F8EF5147C24F400085655 /* RootViewController.h */,
 				FB4F8EF6147C24F400085655 /* RootViewController.m */,
+				B34B67C1147C6D46002E84FC /* AddContactController.h */,
+				B34B67C2147C6D46002E84FC /* AddContactController.m */,
+				B34B67CA147C8886002E84FC /* EditContactController.h */,
+				B34B67CB147C8886002E84FC /* EditContactController.m */,
+				B34B67B8147C6454002E84FC /* ContactDetailViewController.h */,
+				B34B67B9147C6454002E84FC /* ContactDetailViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -116,6 +150,7 @@
 		FB4F8EE6147C24F300085655 /* AHAddressBookPlus */ = {
 			isa = PBXGroup;
 			children = (
+				B34B67B4147C54A2002E84FC /* iPad */,
 				B39A0FD5147C38E800704A12 /* Models */,
 				B39A0FCE147C376000704A12 /* Views */,
 				B39A0FD0147C376900704A12 /* Controllers */,
@@ -189,6 +224,10 @@
 				FB4F8EF4147C24F400085655 /* MainWindow.xib in Resources */,
 				FB4F8EFA147C24F400085655 /* RootViewController.xib in Resources */,
 				B39A0FE1147C4A3300704A12 /* Contacts.plist in Resources */,
+				B34B67B7147C54A3002E84FC /* MainWindow-iPad.xib in Resources */,
+				B34B67BC147C6454002E84FC /* ContactEditView.xib in Resources */,
+				B34B67C9147C8533002E84FC /* ContactDetailView.xib in Resources */,
+				B34B67CE147C97EC002E84FC /* ContactAddView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,12 +243,23 @@
 				FB4F8EF7147C24F400085655 /* RootViewController.m in Sources */,
 				B39A0FD8147C390B00704A12 /* AddressBook.m in Sources */,
 				B39A0FDB147C391700704A12 /* AddressCard.m in Sources */,
+				B34B67BB147C6454002E84FC /* ContactDetailViewController.m in Sources */,
+				B34B67C3147C6D46002E84FC /* AddContactController.m in Sources */,
+				B34B67CC147C8886002E84FC /* EditContactController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		B34B67B5147C54A3002E84FC /* MainWindow-iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B34B67B6147C54A3002E84FC /* en */,
+			);
+			name = "MainWindow-iPad.xib";
+			sourceTree = "<group>";
+		};
 		FB4F8EE9147C24F400085655 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -278,7 +328,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AHAddressBookPlus/AHAddressBookPlus-Prefix.pch";
 				INFOPLIST_FILE = "AHAddressBookPlus/AHAddressBookPlus-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -291,7 +343,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AHAddressBookPlus/AHAddressBookPlus-Prefix.pch";
 				INFOPLIST_FILE = "AHAddressBookPlus/AHAddressBookPlus-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};

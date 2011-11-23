@@ -7,20 +7,32 @@
 //
 
 #import "RootViewController.h"
+#import "ContactDetailViewController.h"
+#import "AddContactController.h"
 
 @implementation RootViewController
 @synthesize myBook;
 
 -(IBAction)addNew:(id)sender{
 
-    NSLog(@"Just a quick check...");
+    AddressCard *card = [AddressCard blankCard];
+	
+    AddContactController *childController = [[AddContactController alloc] initWithNibName:@"ContactAddView" bundle:nil];
+	
+    childController.title = @"Add New Person...";
+    childController.myCard = card;
+    childController.myBook = self.myBook;
+	
+    [self.navigationController pushViewController:childController
+										 animated:YES];
+    [childController release];
     
 }
 
 - (void)viewDidLoad
 {
     self.title = @"Address Book Plus";
-    self.myBook = [[AddressBook alloc] init];
+    AddressBook *newBook = [[AddressBook alloc] init];
     
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc]
                                   initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
@@ -28,19 +40,24 @@
                                   action:@selector(addNew:)];    
     
     self.navigationItem.rightBarButtonItem = addButton;
+                                                
+    
+    self.myBook = newBook;
     
     [addButton release];
-    
+    [newBook release];
     [super viewDidLoad];
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
+    [self.tableView reloadData];
     [super viewWillAppear:animated];
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
+    
     [super viewDidAppear:animated];
 }
 
@@ -70,7 +87,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [myBook entries];
+    return [self.myBook entries];
 }
 
 // Customize the appearance of table view cells.
@@ -82,10 +99,11 @@
     if (cell == nil) {
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
     }
-    
-    
 
     // Configure the cell.
+    cell.textLabel.text = [NSString stringWithFormat:@"%@ %@",
+                           [[self.myBook getCardAtIndex: indexPath.row] firstName],
+                           [[self.myBook getCardAtIndex: indexPath.row] lastName]];
     return cell;
 }
 
@@ -139,6 +157,20 @@
     [self.navigationController pushViewController:detailViewController animated:YES];
     [detailViewController release];
 	*/
+    
+    
+    NSUInteger row = [indexPath row];
+    AddressCard *card = [self.myBook getCardAtIndex:row];
+	
+    ContactDetailViewController *childController = [[ContactDetailViewController alloc] initWithNibName:@"ContactDetailView" bundle:nil];
+	
+    childController.title = [NSString stringWithFormat:@"%@ %@", card.firstName, card.lastName];
+    childController.thisCard = card;
+	
+    [self.navigationController pushViewController:childController
+										 animated:YES];
+    [childController release];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -159,6 +191,7 @@
 
 - (void)dealloc
 {
+    [myBook release];
     [super dealloc];
 }
 
