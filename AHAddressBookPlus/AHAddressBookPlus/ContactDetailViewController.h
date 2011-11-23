@@ -11,13 +11,15 @@
 @interface ContactDetailViewController : UIViewController{
     
     AddressBook *myBook;
-    AddressCard *thisCard;
+    AddressCard *myCard;
+    NSUInteger idx;
     
 }
 @property (retain, nonatomic) IBOutletCollection(UILabel) NSArray *labelCollection;
 @property (retain, nonatomic) IBOutlet UIDatePicker *datePicker;
 
 @property (nonatomic, retain) AddressBook *myBook;
-@property (nonatomic, retain) AddressCard *thisCard;
+@property (nonatomic, retain) AddressCard *myCard;
+@property (nonatomic) NSUInteger idx;
 
 @end

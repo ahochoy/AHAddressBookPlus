@@ -49,6 +49,8 @@
 /*
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
  */
+
+//IBAction responding to the Done Nav Button, creates a new Address Card and Adds it to the book, then reloads parent views table
 -(IBAction)addContact:(id)sender{
 
     AddressCard *newCard = [[AddressCard alloc] init];

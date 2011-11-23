@@ -14,12 +14,14 @@
 #define BDAYIDX 5
 
 #import "EditContactController.h"
+#import "ContactDetailViewController.h"
+#import "RootViewController.h"
 
 @implementation EditContactController
 @synthesize fieldCollection;
 @synthesize datePicker;
 
-@synthesize myBook, myCard;
+@synthesize myBook, myCard, idx;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -45,14 +47,23 @@
     return YES;
 }
 
+
+//Delegate method for response to UIAlertView - user can confirm deletion of Contact
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
     
     if( buttonIndex == 0 ){
-        [self.navigationController popViewControllerAnimated:YES];
-    } else {
         
+        NSLog(@"Count Before: %d", [self.myBook entries]);
+        [self.myBook removeCardatIndex:idx];
+        NSLog(@"Count After: %d", [self.myBook entries]);
+        
+        
+        RootViewController *root = (RootViewController*)[self.navigationController.viewControllers objectAtIndex:0];
+        root.myBook = self.myBook;
+        
+        [self.navigationController popToRootViewControllerAnimated:YES];
+        [root.tableView reloadData];
     }
-    
 }
 
 
@@ -69,16 +80,60 @@
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 */
 
+//IBaction that responds to Delete (Trash) can Nav Button
 -(IBAction)deleteContact:(id)sender{
     
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Title" message:@"AThe message."  delegate:self cancelButtonTitle:@"Index 0" otherButtonTitles: @"Index 1", nil];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Delete Contact" 
+                                                    message:@"Are You Sure You Wanted to Delete this Contact?"  
+                                                   delegate:self 
+                                          cancelButtonTitle:@"Yes" 
+                                          otherButtonTitles: @"No", nil];
     [alert show];
     [alert release];
     
 }
-
+//IBAction that responds to being done with contact editting
 -(IBAction)doneWithContact:(id)sender{
     
+    AddressCard *newCard = [[AddressCard alloc] init];
+    
+    for (UILabel *lbl in fieldCollection) {
+        switch (lbl.tag) {
+            case FIRSTNAMEIDX:
+                newCard.firstName = lbl.text;
+                break;
+            case LASTNAMEIDX:
+                newCard.lastName = lbl.text;
+                break;
+            case ADDRESSIDX:
+                newCard.fullAddress = lbl.text;
+                break;
+            case PHONEIDX:
+                newCard.phoneNumber = lbl.text;
+                break;
+            case EMAILIDX:
+                newCard.email = lbl.text;
+                break;
+            default:
+                break;
+        }
+        
+        newCard.birthday = datePicker.date;
+    }
+    
+    NSLog(@"New First Name: %@", newCard.firstName);
+    
+    [self.myBook swapCardAtIndex:self.idx with:newCard];
+    [self.myBook sortBook];
+    self.myCard = newCard;
+    
+    [self.navigationController popViewControllerAnimated:YES];
+    
+    /*NSArray *allControllers = self.navigationController.viewControllers;
+    ContactDetailViewController *parent = [allControllers lastObject];
+    [parent viewWillAppear:YES];*/
+    
+    [newCard release];
 }
 
 - (void)viewDidLoad

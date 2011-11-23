@@ -13,6 +13,7 @@
 
     AddressBook *myBook;
     AddressCard *myCard;
+    NSUInteger idx;
     
 }
 @property (retain, nonatomic) IBOutletCollection(UITextField) NSArray *fieldCollection;
@@ -20,5 +21,5 @@
 
 @property (nonatomic, retain) AddressBook *myBook;
 @property (nonatomic, retain) AddressCard *myCard;
-
+@property (nonatomic) NSUInteger idx;
 @end

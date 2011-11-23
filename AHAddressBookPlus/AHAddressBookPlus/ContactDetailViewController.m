@@ -18,7 +18,7 @@
 
 @implementation ContactDetailViewController
 
-@synthesize labelCollection, datePicker, myBook, thisCard;
+@synthesize labelCollection, datePicker, myBook, myCard, idx;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -39,13 +39,15 @@
 
 #pragma mark - View lifecycle
 
+//IBAction that responds to user pressing the Edit Button, loads new view into window with appropriate properties
 -(IBAction)editContact:(id)sender{
  
     EditContactController *childController = [[EditContactController alloc] initWithNibName:@"ContactEditView" bundle:nil];
 	
-    childController.title = @"Add New Person...";
-    childController.myCard = self.thisCard;
+    childController.title = @"Edit Contact";
+    childController.myCard = self.myCard;
     childController.myBook = self.myBook;
+    childController.idx = self.idx;
 	
     [self.navigationController pushViewController:childController
 										 animated:YES];
@@ -66,31 +68,61 @@
     for (UILabel *lbl in labelCollection) {
         switch (lbl.tag) {
             case FIRSTNAMEIDX:
-                lbl.text = thisCard.firstName;
+                lbl.text = self.myCard.firstName;
                 break;
             case LASTNAMEIDX:
-                lbl.text = thisCard.lastName;
+                lbl.text = self.myCard.lastName;
                 break;
             case ADDRESSIDX:
-                lbl.text = thisCard.fullAddress;
+                lbl.text = self.myCard.fullAddress;
                 break;
             case PHONEIDX:
-                lbl.text = thisCard.phoneNumber;
+                lbl.text = self.myCard.phoneNumber;
                 break;
             case EMAILIDX:
-                lbl.text = thisCard.email;
+                lbl.text = self.myCard.email;
                 break;
             default:
                 break;
         }
         
-        datePicker.date = thisCard.birthday;
+        datePicker.date = self.myCard.birthday;
     
     }
     
     [editButton release];
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+}
+
+
+//Attempts to keep view fresh with most current information
+-(void)viewDidAppear:(BOOL)animated{
+    for (UILabel *lbl in labelCollection) {
+        switch (lbl.tag) {
+            case FIRSTNAMEIDX:
+                lbl.text = self.myCard.firstName;
+                break;
+            case LASTNAMEIDX:
+                lbl.text = self.myCard.lastName;
+                break;
+            case ADDRESSIDX:
+                lbl.text = self.myCard.fullAddress;
+                break;
+            case PHONEIDX:
+                lbl.text = self.myCard.phoneNumber;
+                break;
+            case EMAILIDX:
+                lbl.text = self.myCard.email;
+                break;
+            default:
+                break;
+        }
+        
+        datePicker.date = self.myCard.birthday;
+    }
+
+    [super viewDidAppear:animated];
 }
 
 - (void)viewDidUnload

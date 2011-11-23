@@ -19,6 +19,7 @@
 
 @synthesize book, path;
 
+//Loads the existing contacts from the plist
 - (id)init{
     self = [super init];
     if(self) {

@@ -13,6 +13,8 @@
 @implementation RootViewController
 @synthesize myBook;
 
+
+//IBAction in response to the '+' button
 -(IBAction)addNew:(id)sender{
 
     AddressCard *card = [AddressCard blankCard];
@@ -165,7 +167,9 @@
     ContactDetailViewController *childController = [[ContactDetailViewController alloc] initWithNibName:@"ContactDetailView" bundle:nil];
 	
     childController.title = [NSString stringWithFormat:@"%@ %@", card.firstName, card.lastName];
-    childController.thisCard = card;
+    childController.myBook = self.myBook;
+    childController.myCard = card;
+    childController.idx = row;
 	
     [self.navigationController pushViewController:childController
 										 animated:YES];
